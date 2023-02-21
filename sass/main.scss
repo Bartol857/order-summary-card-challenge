@@ -1,0 +1,128 @@
+@use './colors' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	font-family: 'Red Hat Display', sans-serif;
+	background: $paleblue url('../images/pattern-background-mobile.svg') top/100%
+		no-repeat;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    height: 100vh;
+    
+    .box {
+        width: 330px;
+        background-color: $white;
+        color: $desaturatedblue;
+        border-radius: 15px;
+        box-shadow: 0 0 25px $desaturatedblue;
+        overflow: hidden;
+
+        &__img {
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__text {
+            margin: 30px;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            color: $darkblue;
+        }
+
+        &__description {
+            margin: 25px 0;
+        }
+
+        &__price {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            font-size: 13px;
+            background-color: $verypaleblue;
+            border-radius: 12px;
+
+            span {
+                font-weight: bold;
+                color: $darkblue;
+            }
+        }
+
+        &__change {
+            font-weight: bold;
+            text-decoration: underline;
+            color: $brightblue;
+            cursor: pointer;
+        }
+
+        &__change:hover {
+            color: $lightblue;
+            text-decoration: none;
+        }
+
+        &__btn {
+            margin: 2rem 0;
+            padding: 1rem;
+            width: 100%;
+            background-color: $brightblue;
+            color: $white;
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px $desaturatedblue;
+            transition:  background-color .3s;
+            cursor: pointer;
+        }
+
+        &__btn:hover {
+            background-color: $lightblue;
+        }
+
+        &__cancel {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        &__cancel:hover {
+            color: $darkblue;
+        }
+    }
+}
+
+
+footer {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+	}
+
+	.attribution a {
+		color: $darkblue;
+	}
+}
+
+@import './desktop';

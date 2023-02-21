@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: "Red Hat Display", sans-serif;
+  background: hsl(225deg, 100%, 94%) url("../images/pattern-background-mobile.svg") top/100% no-repeat;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main .box {
+  width: 330px;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(224deg, 23%, 55%);
+  border-radius: 15px;
+  box-shadow: 0 0 25px hsl(224deg, 23%, 55%);
+  overflow: hidden;
+}
+main .box__img img {
+  width: 100%;
+  height: auto;
+}
+main .box__text {
+  margin: 30px;
+  text-align: center;
+}
+main .box__title {
+  font-size: 1.5rem;
+  color: hsl(223deg, 47%, 23%);
+}
+main .box__description {
+  margin: 25px 0;
+}
+main .box__price {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-size: 13px;
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 12px;
+}
+main .box__price span {
+  font-weight: bold;
+  color: hsl(223deg, 47%, 23%);
+}
+main .box__change {
+  font-weight: bold;
+  text-decoration: underline;
+  color: hsl(245deg, 75%, 52%);
+  cursor: pointer;
+}
+main .box__change:hover {
+  color: hsl(244deg, 82%, 68%);
+  text-decoration: none;
+}
+main .box__btn {
+  margin: 2rem 0;
+  padding: 1rem;
+  width: 100%;
+  background-color: hsl(245deg, 75%, 52%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px hsl(224deg, 23%, 55%);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+main .box__btn:hover {
+  background-color: hsl(244deg, 82%, 68%);
+}
+main .box__cancel {
+  font-weight: bold;
+  cursor: pointer;
+}
+main .box__cancel:hover {
+  color: hsl(223deg, 47%, 23%);
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(223deg, 47%, 23%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background: hsl(225deg, 100%, 94%) url("../images/pattern-background-desktop.svg") top/100% no-repeat;
+  }
+}/*# sourceMappingURL=main.css.map */
